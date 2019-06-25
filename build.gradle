@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.guava:guava:r05' //Using this to get the properties loaded
+    compile 'org.slf4j:slf4j-api:1.7.+' //lets have some nice logging
+    compile 'org.slf4j:slf4j-log4j12:1.7.+'
+    compile 'log4j:log4j:1.2.+'
+    compile group: 'joda-time', name: 'joda-time', version: '2.10' //time converter
+    compile group: 'com.opencsv', name: 'opencsv', version: '4.1' //read csv file
+    compile group: 'com.google.guava', name: 'guava', version: '27.1-jre' //I want to filter my lists so why not use googles guava
+
+    testCompile group: 'junit', name: 'junit', version: '4.12' //yeah we all know what that is for...
+}
